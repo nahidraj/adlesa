@@ -1,0 +1,96 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.banner_area {
+  background-color: #EFF4F7;
+  padding: 56px 0;
+
+  .image {
+    width: 476px;
+    margin-left: auto;
+
+    .image_slider_main {
+      display: flex;
+      overflow: hidden;
+      gap: 10px;
+      height: 501px;
+
+      .image_slider_list {
+        .image_items {
+          animation: scrollY 10s linear infinite;
+
+          img {
+            margin-bottom: 10px;
+            width: 100%;
+            border-radius: 12px;
+          }
+        }
+      }
+
+      .image_slider_list:nth-child(1) .image_items {
+        animation-duration: 10s;
+      }
+
+      .image_slider_list:nth-child(2) .image_items {
+        animation-duration: 8s;
+      }
+
+      .image_slider_list:nth-child(3) .image_items {
+        animation-duration: 12s;
+      }
+
+      .image_slider_list:nth-child(4) .image_items {
+        animation-duration: 9s;
+      }
+
+      .image_slider_list:nth-child(5) .image_items {
+        animation-duration: 11s;
+      }
+
+      .image_slider_list:nth-child(6) .image_items {
+        animation-duration: 7s;
+      }
+
+    }
+  }
+
+  @keyframes scrollY {
+    0% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(calc(-100% - 0px));
+    }
+  }
+
+  .text {
+    .title {
+      @include font(52px, 700);
+      line-height: 64px;
+      color: $black;
+      margin-bottom: 24px;
+    }
+
+    p {
+      @include font(19px, 400);
+      line-height: 36px;
+      color: $paragraph;
+    }
+
+    .get_started_btn {
+      background-color: $primary;
+      padding: 16px 24px;
+      @include font(18px, 500);
+      line-height: 24px;
+      color: $white;
+      border-radius: 8px;
+      margin-top: 40px;
+
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+}

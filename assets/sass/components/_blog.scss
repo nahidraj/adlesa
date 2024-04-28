@@ -1,0 +1,86 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.our_latest_blog_area {
+  padding-top: 100px;
+}
+
+.our_blog_item {
+  padding: 16px;
+
+  .image {
+    margin-bottom: 16px;
+    border-radius: 10px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  .text {
+    .cate {
+      @include font(16px, 500);
+      line-height: 24px;
+      color: $primary;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      @include font(24px, 600);
+      line-height: 36px;
+      color: $black;
+      margin-bottom: 16px;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    p {
+      @include font(14px, 400);
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+
+    .learn_more {
+      color: $black;
+      @include font(18px, 500);
+      line-height: 26px;
+
+      &:hover {
+        color: $primary;
+      }
+
+      i {
+        margin-left: 16px;
+        font-size: 16px;
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+.view_all_blog {
+  margin-top: 56px;
+
+  .view_all_btn {
+    background-color: #1351D8;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 43px;
+    padding: 15px 32px;
+    border: 0;
+
+    &:hover {
+      background-color: $black;
+    }
+
+    i {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+}

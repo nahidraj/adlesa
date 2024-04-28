@@ -1,0 +1,102 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.register_area {
+  padding-top: 100px;
+
+  .register_form {
+    .input_groups {
+      label {
+        @include font(24px, 600);
+        color: $black;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+
+      input {
+        width: 100%;
+        height: 72px;
+        background-color: $white;
+        padding: 0 24px;
+        border: 1px solid rgba(146, 146, 146, 0.2);
+        border-radius: 8px;
+        @include font(20px, 500)
+      }
+
+      select {
+        width: 100%;
+        height: 72px;
+        background-color: $white;
+        padding: 0 24px;
+        border: 1px solid rgba(146, 146, 146, 0.2);
+        border-radius: 8px;
+        @include font(20px, 500)
+      }
+
+      textarea {
+        width: 100%;
+        background-color: $white;
+        padding: 24px;
+        border: 1px solid rgba(146, 146, 146, 0.2);
+        border-radius: 8px;
+        @include font(20px, 500)
+      }
+    }
+
+    .check_box {
+      .title {
+        @include font(24px, 600);
+        color: $black;
+        line-height: 32px;
+        margin-bottom: 24px;
+      }
+
+      .form-check {
+        margin-bottom: 16px;
+        input {
+          cursor: pointer;
+          width: 24px !important;
+          height: 24px !important;
+          border-radius: 50%;
+          border: 2px solid $paragraph;
+          flex: 0 0 auto;
+          box-shadow: none;
+
+          &:focus {
+            background-color: $paragraph !important;
+            border-color: $paragraph !important;
+          }
+        }
+
+        label {
+          cursor: pointer;
+          @include font(17px, 500);
+          line-height: 27px;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .submit {
+      background-color: $primary;
+      color: $white;
+      @include font(18px, 600);
+      border-radius: 43px;
+      padding: 14px 32px;
+      border: 0;
+      margin-top: 0px;
+
+      &:hover {
+        background-color: $black;
+      }
+
+      svg {
+        stroke: $white;
+        margin-right: 8px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}

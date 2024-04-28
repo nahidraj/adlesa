@@ -1,0 +1,161 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.offer_area {
+  padding-top: 80px;
+
+  .offer_top_info {
+    padding-bottom: 60px;
+
+    ul {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      li {
+        .offer_sm_item {
+          border-radius: 5px;
+          border: 1px solid #ECECEC;
+          background-color: $white;
+          padding: 5px 7px;
+
+          img {
+            margin-right: 5px;
+          }
+
+          span {
+            @include font(13px, 400);
+            text-transform: uppercase;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .view_all_btn {
+      background-color: $primary;
+      border-radius: 4px;
+      padding: 5px 24px;
+      @include font(8px, 500);
+      line-height: 14px;
+      color: $white;
+      margin-top: 32px;
+    }
+  }
+
+  .offer_main_info {
+    .offer_main_item {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: space-between;
+      padding: 10px 24px;
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+      margin-bottom: 24px;
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .image {
+          border-radius: 4px;
+
+          img {
+            border-radius: 4px
+          }
+        }
+
+        .text {
+          .title {
+            @include font(16px, 400);
+            line-height: 24px;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 337px;
+
+        .country {
+          margin-right: 24px;
+
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+          }
+        }
+
+        .info {
+          ul {
+            li {
+              display: inline-block;
+              @include font(16px, 400);
+              line-height: 36px;
+              color: #606060;
+              margin-right: 32px;
+            }
+          }
+        }
+
+        .button {
+          margin-left: auto;
+
+          .get_btn {
+            @include font(14px, 700);
+            color: $white;
+            background-color: $primary;
+            padding: 7px 33px;
+            border-radius: 4px;
+            &:hover{
+              background-color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .register_offer_view {
+    padding-top: 76px;
+
+    .title {
+      @include font(24px, 300);
+      margin-bottom: 80px;
+
+      a {
+        @include font(24px, 600);
+        color: $primary;
+      }
+    }
+
+    .info_item {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      background-color: $white;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+
+      .image {
+        img {
+          border-radius: 4px
+        }
+      }
+
+      .text {
+        p {
+          @include font(16px, 400);
+          color: #000;
+        }
+      }
+    }
+  }
+}

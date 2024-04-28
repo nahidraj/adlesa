@@ -1,0 +1,50 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.faq_area {
+  padding-top: 100px;
+  margin-top: -24px;
+
+  .accordion-button {
+    @include font(24px, 500);
+    line-height: 32px;
+    color: $black;
+    background-color: $white;
+    box-shadow: none;
+    padding: 0;
+
+    &:focus {
+      box-shadow: none;
+      ;
+    }
+  }
+
+  .accordion-item {
+    margin-top: 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(175, 175, 175, 0.2);
+    overflow: hidden;
+    padding: 24px;
+
+  }
+
+  .accordion-body {
+    padding: 0;
+    margin-top: 14px;
+
+    p {
+      @include font(18px, 400);
+      line-height: 32px;
+    }
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url(../images/icon/minus.svg);
+  }
+
+  .accordion-button::after {
+    transition: none;
+    background-image: url(../images/icon/plus.svg);
+  }
+}
